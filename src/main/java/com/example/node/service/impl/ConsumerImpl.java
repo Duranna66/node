@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Slf4j
-public class ConsumerImpl  {
+public class ConsumerImpl  implements Consumer{
 
     @KafkaListener(topics = "text", groupId = "myGroup")
     public void receiveTextMessage(String text) {
